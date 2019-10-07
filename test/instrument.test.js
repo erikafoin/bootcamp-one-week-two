@@ -1,16 +1,25 @@
-// IMPORT MODULES under test here:
-// import example from '../src/example.js';
+import renderInstrument from '../products/render-fruit.js';
 
 const test = QUnit.test;
 
-test('time to test a function', function(assert) {
-    //Arrange
-    // Set up your parameters and expectations
+QUnit.module('Render Instrument');
 
-    //Act 
-    // Call the function you're testing and set the result to a const
-
-    //Assert
-    // Make assertions about what is expected valid result
-    assert.equal(true, false);
-});
+test('renders a fruit', assert => {
+    // arrange
+    const apple = {
+        code: 'apple',
+        name: 'Red Apple',
+        image: 'apple.png',
+        description: 'A sweet, delicious, forbidden-to-some treat',
+        category: 'tree-fruit',
+        price: 1.00,
+        cost: 0.25
+    };
+    const expected = '<li class="tree-fruit" title="A sweet, delicious, forbidden-to-some treat"><h3>Red Apple</h3><img src="../assets/apple.png" alt="Red Apple image"><p class="price">$1.00<button value="apple">Add</button></p></li>';
+    
+    // act
+    const dom = renderFruit(apple);
+    const html = dom.outerHTML;
+    
+    // assert
+    assert.equal(html, expected);

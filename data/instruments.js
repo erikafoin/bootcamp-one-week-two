@@ -47,3 +47,35 @@ const bassoon = {
     price: 9000.00,
     cost: 8000.00
 };
+
+const trumpet = {
+    id: 'trumpet',
+    name: 'trumpet',
+    image: 'trumpet.png',
+    description: 'Time to go hunt foxes',
+    category: 'brass',
+    price: 2000.00,
+    cost: 1000.00
+};
+
+const trombone = {
+    id: 'trombone',
+    name: 'Trombone',
+    image: 'trombone.png',
+    description: 'slide away, my friend',
+    category: 'brass',
+    price: 1000.00,
+    cost: 500.00
+};
+
+const tuba = {
+    id: 'tuba',
+    name: 'Tuba',
+    image: 'tuba.png',
+    description: 'ooomph pa pa',
+    category: 'brass',
+    price: 2000.00,
+    cost: 1000.00
+};
+
+export default instruments;
