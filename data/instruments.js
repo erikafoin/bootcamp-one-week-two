@@ -59,7 +59,7 @@ const frenchHorn = {
     description: 'The clarion call of the gods',
     category: 'brass',
     price: 1800.00
-}
+};
 
 const trombone = {
     id: 'trombone',
@@ -79,4 +79,4 @@ const tuba = {
     price: 2000.00
 };
 
-
+export default instruments;

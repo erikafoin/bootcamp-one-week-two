@@ -1,0 +1,5 @@
+#instruments {
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+}
