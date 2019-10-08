@@ -1,8 +1,8 @@
 function renderInstruments(instrument) {
     const li = document.createElement('li');
-    li.setAttribute('id', instrument.id);
+    //li.setAttribute('id', instrument.id);
     li.className = instrument.category;
-    li.setAttribute('name', instrument.name);
+    //li.setAttribute('name', instrument.name);
     li.title = instrument.description;
 
     const h2 = document.createElement('h2');
@@ -10,7 +10,7 @@ function renderInstruments(instrument) {
     li.appendChild(h2);
 
     const img = document.createElement('img');
-    img.src = '../src/instrument-images/' + instrument.image;
+    img.src = instrument.image;
     img.alt = instrument.id + ' image';
     li.appendChild(img);
 
