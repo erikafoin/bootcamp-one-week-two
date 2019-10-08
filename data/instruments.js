@@ -64,7 +64,7 @@ const frenchHorn = {
 const trombone = {
     id: 'trombone',
     name: 'Trombone',
-    image: '../src/instrument-images/trombone.jpeg',
+    image: '../src/instrument-images/trombone.jpg',
     description: 'slide away, my friend',
     category: 'brass',
     price: 1000.00
@@ -73,7 +73,7 @@ const trombone = {
 const tuba = {
     id: 'tuba',
     name: 'Tuba',
-    image: '../src/instrument-images/tuba.jpg',
+    image: '../src/instrument-images/tuba.png',
     description: 'ooomph pa pa',
     category: 'brass',
     price: 2000.00
