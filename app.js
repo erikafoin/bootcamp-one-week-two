@@ -1,0 +1,1 @@
+import instrumentsData from './data/instruments.js';

@@ -1,7 +1,7 @@
 const flute = {
     id: 'flute',
     name: 'Silver Flute',
-    image: 'flute.jpg',
+    image: './src/flute.jpg',
     description: 'The voice of the angels',
     category: 'woodwind',
     price: 1000.00,
@@ -61,7 +61,7 @@ const trumpet = {
 const frenchHorn = {
     id: 'french horn',
     name: 'french horn',
-    image: 'french-horn.jpg'
+    image: 'french-horn.jpg',
     description: 'The clarion call of the gods',
     category: 'brass',
     price: 1800.00,

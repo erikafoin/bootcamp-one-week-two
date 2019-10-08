@@ -1,4 +1,4 @@
-import renderInstrument from '../products/render-fruit.js';
+import renderInstrument from '../products/render-instruments.js';
 
 const test = QUnit.test;
 
@@ -18,7 +18,7 @@ test('renders an instrument', assert => {
     const expected = '<li class="tree-fruit" title="A sweet, delicious, forbidden-to-some treat"><h3>Red Apple</h3><img src="../assets/apple.png" alt="Red Apple image"><p class="price">$1.00<button value="apple">Add</button></p></li>';
     
     // act
-    const dom = renderFruit(apple);
+    const dom = renderInstrument(flute);
     const html = dom.outerHTML;
     
     // assert
