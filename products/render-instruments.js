@@ -1,22 +1,21 @@
 function renderInstruments(instrument) {
-    const ul = document.createElement('ul');
-    ul.setAttribute('id', instrument.id);
-    ul.className = instrument.category;
-    ul.setAttribute('name', instrument.name);
-    ul.title = instrument.description;
+    const li = document.createElement('li');
+    li.setAttribute('id', instrument.id);
+    li.className = instrument.category;
+    li.setAttribute('name', instrument.name);
+    li.title = instrument.description;
 
     const h2 = document.createElement('h2');
     h2.textContent = instrument.name;
-    ul.appendChild(h2);
+    li.appendChild(h2);
 
     const img = document.createElement('img');
     img.src = '../src/instrument-images/' + instrument.image;
     img.alt = instrument.id + ' image';
-    ul.appendChild(img);
+    li.appendChild(img);
 
     const p = document.createElement('p');
-    p.setAttribute('price', instrument.price);
-    //p.ClassName = instrument.price;
+    p.className = 'price';
 
     const usd = '$' + instrument.price.toFixed(2);
     p.textContent = usd;
@@ -27,9 +26,9 @@ function renderInstruments(instrument) {
     p.appendChild(button);
     
 
-    ul.appendChild(p);
+    li.appendChild(p);
 
-    return ul;
+    return li;
 }
 
 export default renderInstruments;
