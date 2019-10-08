@@ -4,8 +4,7 @@ const flute = {
     image: './src/flute.jpg',
     description: 'The voice of the angels',
     category: 'woodwind',
-    price: 1000.00,
-    cost: 550.00
+    price: 1000.00
 };
 
 const oboe = {
@@ -14,8 +13,7 @@ const oboe = {
     image: 'oboe.jpeg',
     description: 'The voice of the duck',
     category: 'woodwind',
-    price: 3000.00,
-    cost: 2000.00
+    price: 3000.00
 };
 
 const clarinet = {
@@ -24,8 +22,7 @@ const clarinet = {
     image: 'clarinet.jpg',
     description: 'Marching band ready',
     category: 'woodwind',
-    price: 250.00,
-    cost: 50.00
+    price: 250.00
 };
 
 const bassClarinet = {
@@ -34,8 +31,7 @@ const bassClarinet = {
     image: 'bassclarinet.jpeg',
     description: 'The sonorous voice of the deep',
     category: 'woodwind',
-    price: 5000.00,
-    cost: 4000.00
+    price: 5000.00
 };
 
 const bassoon = {
@@ -44,8 +40,7 @@ const bassoon = {
     image: 'bassoon.jpeg',
     description: 'Grandpa is calling',
     category: 'woodwind',
-    price: 9000.00,
-    cost: 8000.00
+    price: 9000.00
 };
 
 const trumpet = {
@@ -54,8 +49,7 @@ const trumpet = {
     image: 'trumpet.jpg',
     description: 'Time to go hunt foxes',
     category: 'brass',
-    price: 2000.00,
-    cost: 1000.00
+    price: 2000.00
 };
 
 const frenchHorn = {
@@ -64,8 +58,7 @@ const frenchHorn = {
     image: 'french-horn.jpg',
     description: 'The clarion call of the gods',
     category: 'brass',
-    price: 1800.00,
-    cost: 1000.00
+    price: 1800.00
 }
 
 const trombone = {
@@ -74,8 +67,7 @@ const trombone = {
     image: 'trombone.jpeg',
     description: 'slide away, my friend',
     category: 'brass',
-    price: 1000.00,
-    cost: 500.00
+    price: 1000.00
 };
 
 const tuba = {
@@ -84,8 +76,7 @@ const tuba = {
     image: 'tuba.jpg',
     description: 'ooomph pa pa',
     category: 'brass',
-    price: 2000.00,
-    cost: 1000.00
+    price: 2000.00
 };
 
-export default instruments;
+

@@ -1,30 +1,26 @@
-function renderFruit(fruit) {
+function renderInstruments(instrument) {
     const li = document.createElement('li');
-    li.className = fruit.category;
-    li.title = fruit.description;
+    li.className = instrument.category;
+    li.title = instrument.description;
 
-    const h3 = document.createElement('h3');
-    h3.textContent = fruit.name;
-    li.appendChild(h3);
+    const h2 = document.createElement('h2');
+    h2.textContent = instrument.name;
+    li.appendChild(h2);
 
     const img = document.createElement('img');
-    img.src = '../assets/' + fruit.image;
-    img.alt = fruit.name + ' image';
+    img.src = '../src/instrument-images/' + instrument.image;
+    img.alt = instrument.name + ' image';
     li.appendChild(img);
 
     const p = document.createElement('p');
-    p.className = 'price';
+    p.ClassName = 'price';
 
-    const usd = '$' + fruit.price.toFixed(2);
-    // const usd = fruit.price.toLocaleString('en-US', { 
-    //     style: 'currency', 
-    //     currency: 'USD' 
-    // });
+    const usd = '$' + instrument.price.toFixed(2);
     p.textContent = usd;
-    
+
     const button = document.createElement('button');
-    button.textContent = 'Add';
-    button.value = fruit.code;
+    button.textContent = 'Add to Cart';
+    button.value = instrument.code;
     p.appendChild(button);
 
     li.appendChild(p);
@@ -32,4 +28,4 @@ function renderFruit(fruit) {
     return li;
 }
 
-export default renderFruit;
+export default renderInstruments;
