@@ -9,7 +9,31 @@
 
 }
 
-#instruments ul img {
-    background-color: gray;
+#instruments li {
+    list-style: none;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
 
+}
+
+#instruments li img {
+    width: 50%;
+}
+
+.price {
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
