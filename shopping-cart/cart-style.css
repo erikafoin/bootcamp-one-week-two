@@ -4,5 +4,9 @@ table {
 
 td, th {
     text-align: center;
-    border: dotted 1px blue;
+    border: ridge 3px rebeccapurple;
+}
+
+th {
+    background-color: lightseagreen;
 }
