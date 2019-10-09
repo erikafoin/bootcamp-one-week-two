@@ -1,6 +1,6 @@
 import instruments from '../data/instruments.js';
 import cart from '../data/cart.js';
-import { findById, calcLineItem, calcOrderItem } from '../common/utils.js';
+import { findById, calcOrderTotal, calcLineTotal } from '../common/utils.js';
 const test = QUnit.test;
 
 QUnit.module('Utilities');
@@ -37,7 +37,7 @@ test('calculate line total', assert => {
     const expected = 2000;
       
     // act
-    const total = calcLineItem(quantity, price);
+    const total = calcLineTotal(quantity, price);
     
     // assert
     assert.equal(total, expected);
@@ -48,7 +48,7 @@ test('calculate order item', assert => {
     const expected = 2000.00;
 
     //act
-    const orderTotal = calcOrderItem(cart, instruments);
+    const orderTotal = calcOrderTotal(cart, instruments);
 
     //assert
     assert.equal(orderTotal, expected);

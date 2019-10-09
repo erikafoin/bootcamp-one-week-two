@@ -1,7 +1,7 @@
 
 import { toUSD } from '../common/utils.js';
 
-function renderTableRow(tableRow, instrument) {
+function renderTableRow(lineItem, instrument) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
