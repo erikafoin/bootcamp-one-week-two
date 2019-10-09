@@ -1,53 +1,55 @@
-import findById from '../common/utils.js';
-import calcLineItem from '../common/utils.js';
-
+import instruments from '../data/instruments.js';
+import cart from '../data/cart.js';
+import { findById, calcLineItem, calcOrderItem } from '../common/utils.js';
 const test = QUnit.test;
 
-QUnit.module('Render Instrument');
+QUnit.module('Utilities');
 
-test('renders an instrument', assert => {
-    // arrange
-    const flute = {
-        id: 'flute',
-        name: 'Silver Flute',
-        image: 'flute.jpeg',
-        description: 'The voice of the angels',
-        category: 'woodwind',
-        price: 1000.00,
-    };
-    const expected = '<li id="flute" class="woodwind" name="Silver Flute" title="The voice of the angels"><h2>Silver Flute</h2><img src="flute.jpeg" alt="flute image"><p class="price">$1000.00<button id="flute">Add to Cart</button></p></li>';
+test('find product by id', assert => {
+    //arrange
+    const id = 'flute';
+    const expected = 'flute';
     
     // act
-    const dom = renderInstrument(flute);
-    const html = dom.outerHTML;
+    const foundInst = findById(instruments, id);
     
     // assert
-    assert.equal(html, expected);
+    assert.ok(foundInst);
+    assert.equal(foundInst.name, expected);
 });
 
-
-test('renders a table row', assert => {
+test('find product by id returns null if not found', assert => {
     // arrange
-    const flute = {
-        id: 'flute',
-        name: 'Silver Flute',
-        image: 'flute.jpeg',
-        description: 'The voice of the angels',
-        category: 'woodwind',
-        price: 1000.00,
-    };
-    
-    const fluteOrder = {
-        id: flute,
-        quantity: 2,
-    };
+    const id = 'not found';
+    const expected = null;
 
-    const expected = '<tr><td>flute</td><td>2</td><td>$1000</td><td>$2000</td></tr>';
-    
     // act
-    const instElementTr = renderTableRow(flute, fluteOrder);
-    const stringHtmlOfInstElement = instElementTr.outerHtml;
+    const foundInst = findById(instruments, id);
+
+    // assert
+    assert.equal(foundInst, expected);
+});
+
+test('calculate line total', assert => {
+    // arrange
+    const quantity = 3;
+    const price = 2.01;
+    const expected = 6.03;
+      
+    // act
+    const total = calcLineItem(quantity, price);
     
     // assert
-    assert.equal(stringHtmlOfInstElement, expected);
+    assert.equal(total, expected);
+});
+
+test('calculate order item', assert => {
+    //arrange
+    const expected = 22.30;
+
+    //act
+    const orderTotal = calcOrderItem(cart, instruments);
+
+    //assert
+    assert.equal(orderTotal, expected);
 });
