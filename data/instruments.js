@@ -37,7 +37,7 @@ const bassClarinet = {
 const bassoon = {
     id: 'bassoon',
     name: 'Bassoon',
-    image: '../src/instrument-images/bassoon.jpeg',
+    image: '../src/instrument-images/bassoon.png',
     description: 'Grandpa is calling',
     category: 'woodwind',
     price: 9000.00

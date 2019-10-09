@@ -1,4 +1,8 @@
+
+
 h2 {
+    display: flex;
+    align-items: center;
     font-size: 36pt;
 }
 
@@ -15,11 +19,13 @@ th {
     background-color: lightseagreen;
 }
 
+a {
+    display: flex;
+}
+
 .button {
     background-color: lightgray;
     display: flex;
     justify-content: space-evenly;
-    align-items: right;
-    
-    
+    align-items: right; 
 }
