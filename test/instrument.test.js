@@ -3,7 +3,7 @@ import renderTableRow from '../shopping-cart/render-table-row.js';
 
 const test = QUnit.test;
 
-QUnit.module('Render Instrument');
+QUnit.module('Render Instrument, render Table Row');
 
 test('renders an instrument', assert => {
     // arrange
@@ -27,32 +27,6 @@ test('renders an instrument', assert => {
 
 
 test('renders a table row', assert => {
-    // arrange
-    const flute = {
-        id: 'flute',
-        name: 'Silver Flute',
-        image: 'flute.jpeg',
-        description: 'The voice of the angels',
-        category: 'woodwind',
-        price: 1000.00,
-    };
-    
-    const fluteOrder = {
-        id: flute,
-        quantity: 2,
-    };
-
-    const expected = '<tr><td>flute</td><td>2</td><td>$1000</td><td>$2000</td></tr>';
-    
-    // act
-    const instElementTr = renderTableRow(flute, fluteOrder);
-    const stringHtmlOfInstElement = instElementTr.outerHtml;
-    
-    // assert
-    assert.equal(stringHtmlOfInstElement, expected);
-});
-
-/*test('renders a table row', assert => {
     // arrange
     const flute = {
         id: 'flute',
