@@ -1,4 +1,4 @@
-import cart from '..data/cart.js';
+import cart from '../data/cart.js';
 import instruments from '../data/instruments.js';
 import { calcOrderTotal, toUSD } from '../common/utils.js';
 import renderTableRow from './render-table-row.js';
@@ -19,3 +19,5 @@ cart.forEach(instOrder => {
 
 const orderTotal = calcOrderTotal(cart, instruments);
 orderTotalCell.textContent = toUSD(orderTotal);
+
+export default cart;

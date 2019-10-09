@@ -27,7 +27,7 @@ const clarinet = {
 
 const bassClarinet = {
     id: 'bass clarinet',
-    name: 'Bass clarinet',
+    name: 'Bass Clarinet',
     image: '../src/instrument-images/bassclarinet.jpeg',
     description: 'The sonorous voice of the deep',
     category: 'woodwind',
@@ -45,7 +45,7 @@ const bassoon = {
 
 const trumpet = {
     id: 'trumpet',
-    name: 'trumpet',
+    name: 'Trumpet',
     image: '../src/instrument-images/trumpet.jpg',
     description: 'Time to go hunt foxes',
     category: 'brass',
@@ -54,7 +54,7 @@ const trumpet = {
 
 const frenchHorn = {
     id: 'french horn',
-    name: 'french horn',
+    name: 'French Horn',
     image: '../src/instrument-images/french-horn.jpg',
     description: 'The clarion call of the gods',
     category: 'brass',
