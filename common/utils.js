@@ -1,10 +1,10 @@
 
 export function findById(instruments, id) {
     for (let i = 0; i < instruments.length; i++) {
-        const instruments = instruments[i];
+        const instrument = instruments[i];
 
-        if (instruments.id === id) {
-            return instruments;
+        if (instrument.id === id) {
+            return instrument;
         }
     }
     return null;
