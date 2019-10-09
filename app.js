@@ -1,4 +1,4 @@
-import instruments from '..data/instruments.js';
+import instruments from '../data/instruments.js';
 import renderInstruments from './render-instruments.js';
 
 const instList = document.getElementById('instruments');
