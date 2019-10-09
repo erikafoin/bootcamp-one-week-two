@@ -1,15 +1,15 @@
 
 const cart = [{
-    code: 'apple',
+    id: 'flute',
     quantity: 2
 }, {
-    code: 'banana',
-    quantity: 5
-}, {
-    code: 'mango',
+    id: 'oboe',
     quantity: 1
 }, {
-    code: 'orange',
+    id: 'clarinet',
+    quantity: 1
+}, {
+    id: 'trumpet',
     quantity: 10
 }];
 
