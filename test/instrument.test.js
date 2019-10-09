@@ -8,7 +8,7 @@ const test = QUnit.test;
 QUnit.module('Render Instrument, render Table Row');
 
 test('renders an instrument', assert => {
-    // arrange
+
     const flute = {
         id: 'flute',
         name: 'Silver Flute',
@@ -19,29 +19,25 @@ test('renders an instrument', assert => {
     };
     const expected = '<li id="flute" class="woodwind" name="Silver Flute" title="The voice of the angels"><h2>Silver Flute</h2><img src="flute.png" alt="flute image"><p class="price">$1000.00<button id="flute">Add to Cart</button></p></li>';
     
-    // act
     const dom = renderInstrument(flute);
     const html = dom.outerHTML;
     
-    // assert
     assert.equal(html, expected);
 });
 
 
 test('renders a table row', assert => {
-    // arrange
+
     const lineItem = {
         id: 'flute',
         quantity: 2,
     };
     
     const flute = findById(instruments, lineItem.id);
-    const expected = '<tr><td class="align-left">Silver Flute</td><td>2</td><td>$1,000.00</td><td class=\"line-item-total\">$2,000.00</td></tr>';
+    const expected = '<tr><td class="align-left">Silver Flute</td><td></td><td>$1,000.00</td><td class="line-item-total">$2,000.00</td></tr>';
     
-    // act
     const instElementTr = renderTableRow(lineItem, flute);
     const stringHtmlOfInstElement = instElementTr.outerHTML;
     
-    // assert
-    assert.equal(stringHtmlOfInstElement, expected);
+    assert.deepEqual(stringHtmlOfInstElement, expected);
 });

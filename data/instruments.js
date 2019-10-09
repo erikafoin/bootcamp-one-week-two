@@ -10,7 +10,7 @@ const flute = {
 const oboe = {
     id: 'oboe',
     name: 'Wood Oboe',
-    image: '../src/instrument-images/oboe.jpeg',
+    image: '../src/instrument-images/oboe.png',
     description: 'The voice of the duck',
     category: 'woodwind',
     price: 3000.00
@@ -19,7 +19,7 @@ const oboe = {
 const clarinet = {
     id: 'clarinet',
     name: 'Plastic Clarinet',
-    image: '../src/instrument-images/clarinet.jpg',
+    image: '../src/instrument-images/clarinet.png',
     description: 'Marching band ready',
     category: 'woodwind',
     price: 250.00
@@ -28,7 +28,7 @@ const clarinet = {
 const bassClarinet = {
     id: 'bass clarinet',
     name: 'Bass Clarinet',
-    image: '../src/instrument-images/bassclarinet.jpeg',
+    image: '../src/instrument-images/bass-clarinet.png',
     description: 'The sonorous voice of the deep',
     category: 'woodwind',
     price: 5000.00
@@ -46,7 +46,7 @@ const bassoon = {
 const trumpet = {
     id: 'trumpet',
     name: 'Trumpet',
-    image: '../src/instrument-images/trumpet.jpg',
+    image: '../src/instrument-images/trumpet.png',
     description: 'Time to go hunt foxes',
     category: 'brass',
     price: 2000.00
@@ -55,7 +55,7 @@ const trumpet = {
 const frenchHorn = {
     id: 'french horn',
     name: 'French Horn',
-    image: '../src/instrument-images/french-horn.jpg',
+    image: '../src/instrument-images/french-horn.png',
     description: 'The clarion call of the gods',
     category: 'brass',
     price: 1800.00
@@ -64,7 +64,7 @@ const frenchHorn = {
 const trombone = {
     id: 'trombone',
     name: 'Trombone',
-    image: '../src/instrument-images/trombone.jpg',
+    image: '../src/instrument-images/trombone.png',
     description: 'slide away, my friend',
     category: 'brass',
     price: 1000.00
