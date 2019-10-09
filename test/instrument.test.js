@@ -1,4 +1,3 @@
-import instruments from '../data/instruments.js'
 import renderInstrument from '../products/render-instruments.js';
 import renderTableRow from '../shopping-cart/render-table-row.js';
 

@@ -1,8 +1,10 @@
+import cart from '..data/cart.js';
+import instruments from '../data/instruments.js';
+import { findById, calcOrderTotal, toUSD } from '../common/utils.js';
 import renderTableRow from './render-table-row.js';
-import { makePrettyCurrency } from './common/utils.js';
-import instruments, { cart } from '../data/instruments.js';
 
-const tableElement = document.querySelector('tbody');
+const tbody = document.querySelector('tbody');
+const orderTotalCell = document.getElementById('order-total-cell');
 
 cart.forEach(instOrder => {
     const instIdFromOrder = instOrder.id;

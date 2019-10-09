@@ -1,43 +1,12 @@
-//export const m
-
-
-
-const totalInstPrice = (instruments, quantity) => fruit.price * quantity;
-export const cartTotal = (instrument, cart) => {
-
-}
 
 export function findById(instruments, id) {
     for (let i = 0; i < instruments.length; i++) {
-        const instrumentsById = instruments[i];
-    }
-}
- export function calcLineTotal(quantity, price) {
-     const amount = quantity * price;
-     return roundCurrency(amount);
- }
+        const instruments = instruments[i];
 
-
-const calcLineItem
-
-/*
-
-export function calcLineTotal(quantity, price) {
-    const amount = quantity * price;
-    return roundCurrency(amount);
-
-export function findById(items, id) {
-    // loop the array
-    for (let i = 0; i < items.length; i++) {
-        const item = items[i];
-
-        // check the id against item.id
-        if (item.id === id) {
-            return item;
+        if (instruments.id === id) {
+            return instruments;
         }
     }
-
-    // loop done, nothing found
     return null;
 }
 
@@ -48,5 +17,24 @@ export function toUSD(number) {
     });
 }
 
+export function calcLineTotal(quantity, price) {
+    const amount = quantity * price;
+    return roundCurrency(amount);
+}
 
-    */
+function roundCurrency(amount) {
+    return Math.round(amount * 100) / 100;
+}
+
+export function calcOrderTotal(cart, instruments) {
+    let orderTotal = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        const lineItem = cart[i];
+        const instrument = findById(instruments, lineItem.id);
+        const lineTotal = calcLineTotal(lineItem.quantity, instrument.price);
+        orderTotal += lineTotal;
+    }
+
+    return roundCurrency(orderTotal);
+}
