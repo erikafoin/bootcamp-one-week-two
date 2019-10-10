@@ -1,3 +1,7 @@
+import { findById } from '../common/utils.js';
+import { toUSD } from '../common/utils.js';
+export const CART_KEY = 'cart';
+
 function renderInstruments(instrument) {
     const li = document.createElement('li');
     li.setAttribute('id', instrument.id);
@@ -16,18 +20,43 @@ function renderInstruments(instrument) {
 
     const p = document.createElement('p');
     p.className = 'price';
-
-    const usd = '$' + instrument.price.toFixed(2);
-    p.textContent = usd;
+    p.textContent = toUSD(instrument.price);
 
     const button = document.createElement('button');
     button.id = instrument.id;
     button.textContent = 'Add to Cart';
-    p.appendChild(button);
+    button.addEventListener('click', () => {
+        
+        let json = localStorage.getItem('cart');
+        let cart;
+        if (json) {
+            cart = JSON.parse(json);
+        }
+        else {
+            cart = [];
+        }
+
+        let lineItem = findById(cart, instrument.id);
     
+        if (!lineItem) {
+            lineItem = {
+                id: instrument.id,
+                quantity: 1
+            };
+    
+            cart.push(lineItem);
+        }
+        else {
+            lineItem.quantity++;
+        }
+    
+        localStorage.setItem('cart', JSON.stringify(cart));
 
+        alert('1 ' + instrument.name + ' added to cart');
+    });  
+    
+    p.appendChild(button);   
     li.appendChild(p);
-
     return li;
 }
 
