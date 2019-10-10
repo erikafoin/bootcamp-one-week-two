@@ -17,7 +17,7 @@ test('renders an instrument', assert => {
         category: 'woodwind',
         price: 1000.00,
     };
-    const expected = '<li id="flute" class="woodwind" name="Silver Flute" title="The voice of the angels"><h2>Silver Flute</h2><img src="flute.png" alt="flute image"><p class="price">$1000.00<button id="flute">Add to Cart</button></p></li>';
+    const expected = '<li id="flute" class="woodwind" name="Silver Flute" title="The voice of the angels"><h2>Silver Flute</h2><img src="flute.png" alt="flute image"><p class="price">$1,000.00<button id="flute">Add to Cart</button></p></li>';
     
     const dom = renderInstrument(flute);
     const html = dom.outerHTML;

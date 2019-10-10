@@ -2,8 +2,6 @@ import { findById } from '../common/utils.js';
 import { toUSD } from '../common/utils.js';
 export const CART_KEY = 'cart';
 
-const emptyCart = [];
-
 function renderInstruments(instrument) {
     const li = document.createElement('li');
     li.setAttribute('id', instrument.id);
@@ -26,6 +24,7 @@ function renderInstruments(instrument) {
 
     const button = document.createElement('button');
     button.id = instrument.id;
+    button.textContent = 'Add to Cart';
     button.addEventListener('click', () => {
         
         let json = localStorage.getItem('cart');
@@ -34,9 +33,9 @@ function renderInstruments(instrument) {
             cart = JSON.parse(json);
         }
         else {
-            emptyCart;
+            cart = [];
         }
-    
+
         let lineItem = findById(cart, instrument.id);
     
         if (!lineItem) {
@@ -53,7 +52,7 @@ function renderInstruments(instrument) {
     
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        alert('1' + instrument.name + ' added to cart');
+        alert('1 ' + instrument.name + ' added to cart');
     });  
     
     p.appendChild(button);

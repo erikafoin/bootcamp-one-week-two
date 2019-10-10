@@ -1,15 +1,16 @@
-import cart from '../data/cart.js';
 import instruments from '../data/instruments.js';
 import { findById, calcOrderTotal, toUSD } from '../common/utils.js';
 import renderTableRow from './render-table-row.js';
+
 
 const tbody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('order-total-cell');
 const placeOrderButton = document.getElementById('place-order-button');
 
-cart;
-if (localStorage.getItem('cart')) {
-    cart = JSON.parse(localStorage.getItem);
+const json = localStorage.getItem('cart');
+let cart;
+if (json) {
+    cart = JSON.parse(localStorage.getItem('cart'));
 }
 else {
     cart = [];
