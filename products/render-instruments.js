@@ -55,12 +55,9 @@ function renderInstruments(instrument) {
         alert('1 ' + instrument.name + ' added to cart');
     });  
     
-    p.appendChild(button);
-    
+    p.appendChild(button);   
     li.appendChild(p);
-
     return li;
 }
-
 
 export default renderInstruments;
