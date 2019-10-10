@@ -34,7 +34,7 @@ test('renders a table row', assert => {
     };
     
     const flute = findById(instruments, lineItem.id);
-    const expected = '<tr><td class="align-left">Silver Flute</td><td></td><td>$1,000.00</td><td class="line-item-total">$2,000.00</td></tr>';
+    const expected = '<tr><td class="align-left">Silver Flute</td><td>2</td><td>$1,000.00</td><td class="line-item-total">$2,000.00</td></tr>';
     
     const instElementTr = renderTableRow(lineItem, flute);
     const stringHtmlOfInstElement = instElementTr.outerHTML;
