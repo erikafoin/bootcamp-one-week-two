@@ -1,37 +1,8 @@
 import { findById } from '../common/utils.js';
 import { toUSD } from '../common/utils.js';
-
-const emptyCart = [];
 export const CART_KEY = 'cart';
 
-let json = localStorage.getItem('cart');
-let cart;
-if (json) {
-    cart = JSON.parse(json);
-}
-else {
-    emptyCart;
-}
-
-const retrieveCart = () => JSON.parse(localStorage.getItem(cart));
-
-const instrument = instrument.id;
-
-let lineItem = findById('cart', instrument.id);
-
-if (!lineItem) {
-    lineItem = {
-        id: instrument.id,
-        quantity: 1
-    };
-
-    cart.push(lineItem);
-}
-else {
-    lineItem.quantity++;
-}
-
-const fullCart = () => JSON.stringify(localStorage.setItem)
+const emptyCart = [];
 
 function renderInstruments(instrument) {
     const li = document.createElement('li');
@@ -51,19 +22,46 @@ function renderInstruments(instrument) {
 
     const p = document.createElement('p');
     p.className = 'price';
-
-    const usd = '$' + instrument.price.toFixed(2);
-    p.textContent = usd;
+    p.textContent = toUSD(instrument.price);
 
     const button = document.createElement('button');
     button.id = instrument.id;
-    button.textContent = 'Add to Cart';
+    button.addEventListener('click', () => {
+        
+        let json = localStorage.getItem('cart');
+        let cart;
+        if (localStorage.getItem(cart)) {
+            cart = JSON.parse(json);
+        }
+        else {
+            emptyCart;
+        }
+    
+        let lineItem = findById(cart, instrument.id);
+    
+        if (!lineItem) {
+            lineItem = {
+                id: instrument.id,
+                quantity: 1
+            };
+    
+            cart.push(lineItem);
+        }
+        else {
+            lineItem.quantity++;
+        }
+    
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        alert('1' + instrument.name + ' added to cart');
+    });  
+    
     p.appendChild(button);
     
-
     li.appendChild(p);
 
     return li;
 }
+
 
 export default renderInstruments;
