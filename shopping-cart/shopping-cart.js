@@ -5,7 +5,7 @@ import renderTableRow from './render-table-row.js';
 
 const tbody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('order-total-cell');
-const placeOrderButton = document.getElementById('place-order-button');
+const placeOrderButton = document.getElementById('place-order');
 
 const json = localStorage.getItem('cart');
 let cart;

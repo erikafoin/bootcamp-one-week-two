@@ -10,7 +10,7 @@ function renderTableRow(lineItem, instrument) {
     tr.appendChild(nameCell);
 
     const quantityCell = document.createElement('td');
-    quantityCell.textContent = instrument.quantity;
+    quantityCell.textContent = lineItem.quantity;
     tr.appendChild(quantityCell);
 
     const priceCell = document.createElement('td');

@@ -29,7 +29,7 @@ function renderInstruments(instrument) {
         
         let json = localStorage.getItem('cart');
         let cart;
-        if (localStorage.getItem(cart)) {
+        if (json) {
             cart = JSON.parse(json);
         }
         else {
