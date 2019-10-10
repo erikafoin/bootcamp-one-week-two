@@ -37,3 +37,16 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+.button {
+    background-color: lightgray;
+    height: 18px;
+    width: 60px;
+}
+.button:hover {
+	background-color:#6c7c7c;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
