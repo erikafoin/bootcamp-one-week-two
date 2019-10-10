@@ -4,10 +4,20 @@ import { toUSD } from '../common/utils.js';
 const emptyCart = [];
 export const CART_KEY = 'cart';
 
-const retrieveCart = () => JSON.parse(localStorage.getItem(CART_KEY));
+let json = localStorage.getItem('cart');
+let cart;
+if (json) {
+    cart = JSON.parse(json);
+}
+else {
+    emptyCart;
+}
 
+const retrieveCart = () => JSON.parse(localStorage.getItem(cart));
 
-let lineItem = findById(cart, instrument.id);
+const instrument = instrument.id;
+
+let lineItem = findById('cart', instrument.id);
 
 if (!lineItem) {
     lineItem = {

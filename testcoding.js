@@ -35,7 +35,7 @@ Add an event handling to the "place order" button that:
 
 
 
-
+questions: I defined instrument in both render-instruments.js and products.js? problem?
 
 
 
