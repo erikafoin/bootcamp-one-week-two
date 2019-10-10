@@ -1,3 +1,21 @@
+import { findById } from '../common/utils.js';
+import { toUSD } from '../common/utils.js';
+
+
+const emptyCart = [];
+
+export const findById = (id, instruments) => {
+    let cartInstruments;
+
+    instruments.forEach(instrument => {
+        if instrument.id===id {
+            matchingInstrument = instrument;
+        } 
+    });
+
+    return matchingInstrument;
+}
+
 function renderInstruments(instrument) {
     const li = document.createElement('li');
     li.setAttribute('id', instrument.id);
