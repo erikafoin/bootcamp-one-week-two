@@ -1,20 +1,27 @@
 import { findById } from '../common/utils.js';
 import { toUSD } from '../common/utils.js';
 
-
 const emptyCart = [];
+export const CART_KEY = 'cart';
 
-export const findById = (id, instruments) => {
-    let cartInstruments;
+const retrieveCart = () => JSON.parse(localStorage.getItem(CART_KEY));
 
-    instruments.forEach(instrument => {
-        if instrument.id===id {
-            matchingInstrument = instrument;
-        } 
-    });
 
-    return matchingInstrument;
+let lineItem = findById(cart, instrument.id);
+
+if (!lineItem) {
+    lineItem = {
+        id: instrument.id,
+        quantity: 1
+    };
+
+    cart.push(lineItem);
 }
+else {
+    lineItem.quantity++;
+}
+
+const fullCart = () => JSON.stringify(localStorage.setItem)
 
 function renderInstruments(instrument) {
     const li = document.createElement('li');
