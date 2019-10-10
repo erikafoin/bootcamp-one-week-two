@@ -20,7 +20,6 @@ function renderTableRow(lineItem, instrument) {
     const totalCell = document.createElement('td');
     totalCell.className = 'line-item-total';
     const total = lineItem.quantity * instrument.price;
-    console.log(total);
     totalCell.textContent = toUSD(total);
     tr.appendChild(totalCell);
 
