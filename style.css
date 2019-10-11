@@ -7,19 +7,30 @@ body {
 }
 
 div img {\
-    width: 50%;
+    width: 300px;
+    height: 375px;
+    
 }
 
 nav {
     text-align: center;
 }
 
-title {
+body h1 {
+    display: flex;
     font-family: 'Zhi Mang Xing', cursive;
-    font-size: 72px;
+    font-size: 48px;
     text-align: center;
+    height: 180px;
+    width: 80%;
+    background-color: darkblue;
+    color: lightskyblue;
+    align-items: center;
 }
 
+li {
+    display: inline;
+}
 ul {
     list-style: none;
 }
