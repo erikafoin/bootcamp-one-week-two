@@ -18,6 +18,12 @@ div img {
     margin: 8px;   
 }
 
+.picture {
+    width: 350px;
+    height: 350px;
+}
+
+
 div article {
     display: inline-block;
     width: 100%;
@@ -29,10 +35,6 @@ banner {
     width: 80%;
     height: 180px;
     background-color: darkblue;
-}
-
-nav {
-    text-align: center;
 }
 
 body h1 {
@@ -51,9 +53,16 @@ body h1 {
 }
 
 nav {
+    display: flex;
     color: lightskyblue;
-    height: 20px;
+    height: 48px;
     width: 80%;
+    background-color: darkblue;
+    color: lightskyblue;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 li {
@@ -86,6 +95,7 @@ div {
 article {
     background-color: whitesmoke;
     font-family: 'Oswald', sans-serif;
+    font-size: 18pt;
     height: auto
 
 }
@@ -94,7 +104,11 @@ p .hero {
 
 }
 
+.clearfix {
+    overflow: auto;
+}
+
 img .hero {
-    float: left;
+    display: flex;
 
 }
