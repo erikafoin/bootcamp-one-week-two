@@ -6,8 +6,8 @@ body {
     text-align: center;
 }
 
-div img {
-
+div img {\
+    width: 50%;
 }
 
 nav {
@@ -28,6 +28,9 @@ ul {
     background-color: lightgoldenrodyellow;
 }
 
-grid {
-    grid-template-columns: 100rem;
+#grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+    width: 100%;
 }
