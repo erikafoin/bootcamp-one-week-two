@@ -51,14 +51,16 @@ ul {
 }
 
 .img {
-    background-color: lightgoldenrodyellow;
+    max-width: 100%;
+    height: auto;
 }
 
-#grid {
-    display: inline-block;
+#container {
+    display: grid;
     grid-template-columns: 30% 30% 30%;
-    grid-template-rows: auto;
+    grid-template-rows: 2;
     width: 100%;
-    width: 300px;
     height: 375px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
