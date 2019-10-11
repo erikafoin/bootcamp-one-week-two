@@ -1,12 +1,13 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
+    box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: lightgoldenrodyellow;
     margin: 20px;
     text-align: center;
+}
+
+div img {
+
 }
 
 nav {
@@ -17,6 +18,11 @@ h1 {
     font-size: 36px;
     text-align: center;
 }
+
+ul {
+    list-style: none;
+}
+
 .img {
     background-color: lightgoldenrodyellow;
 }
