@@ -31,10 +31,11 @@ div article {
     margin: 8px;
 }
 
-banner {
+header {
     width: 80%;
     height: 180px;
     background-color: darkblue;
+    align-items: center;
 }
 
 body h1 {
@@ -97,18 +98,31 @@ article {
     font-family: 'Oswald', sans-serif;
     font-size: 18pt;
     height: auto
-
 }
 
+.hero {
+    display: flex;
+}
 p .hero {
+    font-size: 24pt;
+}
 
+img .hero {
+    width: auto;
+    height: 25%;
 }
 
 .clearfix {
     overflow: auto;
 }
+a:link {
+    color: whitesmoke
+}
 
-img .hero {
-    display: flex;
+a:visited {
+    color: lightslategrey;
+}
 
+a:hover {
+    color: hotpink;
 }
