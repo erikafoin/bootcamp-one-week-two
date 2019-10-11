@@ -1,3 +1,8 @@
+* {
+    -webkit-box-sizing: border-box;
+    -mox-box-styling: border-box;
+    box-sizing: border-box;
+}
 body {
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
@@ -6,10 +11,17 @@ body {
     text-align: center;
 }
 
-div img {\
+div img {
+    display: inline-block;
     width: 300px;
     height: 375px;
-    
+    margin: 8px;   
+}
+
+banner {
+    width: 80%;
+    height: 180px;
+    background-color: darkblue;
 }
 
 nav {
@@ -26,6 +38,9 @@ body h1 {
     background-color: darkblue;
     color: lightskyblue;
     align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 li {
@@ -40,8 +55,10 @@ ul {
 }
 
 #grid {
-    display: grid;
+    display: inline-block;
     grid-template-columns: 30% 30% 30%;
     grid-template-rows: auto;
     width: 100%;
+    width: 300px;
+    height: 375px;
 }
