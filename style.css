@@ -1,6 +1,6 @@
 body {
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Oswald', sans-serif;
     background-color: lightgoldenrodyellow;
     margin: 20px;
     text-align: center;
@@ -14,8 +14,9 @@ nav {
     text-align: center;
 }
 
-h1 {
-    font-size: 36px;
+title {
+    font-family: 'Zhi Mang Xing', cursive;
+    font-size: 72px;
     text-align: center;
 }
 
@@ -25,4 +26,8 @@ ul {
 
 .img {
     background-color: lightgoldenrodyellow;
+}
+
+grid {
+    grid-template-columns: 100rem;
 }
