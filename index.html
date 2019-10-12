@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Zhi+Mang+Xing&display=swap" rel="stylesheet">
     <title>Orchestra Instruments Unlimited</title>
 </head>
@@ -16,25 +15,29 @@
     <h1>Welcome to Orchestra Instruments Unlimited</h1>
     <nav>
         <ul>
-            <li><a href="index.html">Home Page</a></li>
+            <li><a href="index.html">Home Page</a>
             <li>
-                <a href="/products/index.html">Buy Instruments<a>
+                <a href="./products/index.html">Buy Instruments</a>
             </li>
             <li>
-                <a href="/shopping-cart/shopping-cart.html">Buy Instruments</a>
+                <a src="./shopping-cart/index.html">Shopping Cart</a>
             </li>
         </ul>
     </nav>
     </header>
-<div>
-    <img class=hero alt=music-notes src="src/instrument-images/square music notes.jpg">
-    <p class=hero>
-    Welcome to the wonderful world of orchestra instruments! We aim to provide the highest level of musical geekery available in the universe. Whether your taste runs to shiny brass, sleek wood, or things you can bang on hard, we've got it all for you. Let us take you on a journey of clarinets, French horns, and other instruments that can absorb your hot air.
-    </p>
-</div>
-<section id=container>
+<section id="flex-column">
     <div>
-        <img alt='child playing flute' class='picture' src="/src/instrument-images/child-flute.jpg">
+        <img class="hero" alt="music-notes" src="./src/instrument-images/square music notes.jpg">
+    </div>
+    <div>
+        <p class="hero">
+        Your source for the best band instruments on the World Wide Web.
+        </p>
+    </div>
+</section>
+<section id="container">
+    <div>
+        <img alt="child playing flute" class="picture" src="/src/instrument-images/child-flute.jpg">
     </div>
     <div>
         <article>
@@ -42,19 +45,19 @@
         </article>
     </div>
     <div>
-        <img alt='orchestral horns' class='picture' src="/src/instrument-images/horns-orchestra.jpg">
+        <img alt="orchestral horns" class="picture" src="/src/instrument-images/horns-orchestra.jpg">
     </div>
     <div>
-        <img alt='orchestra' class='picture' src="/src/instrument-images/organ-orchestra.jpeg">
+        <img alt="orchestra" class="picture" src="/src/instrument-images/organ-orchestra.jpeg">
     </div>
-        <img alt='trumpeter' class='picture' src="/src/instrument-images/trumpet-player.jpg">
+        <img alt="trumpeter" class="picture" src="/src/instrument-images/trumpet-player.jpg">
     </div>
     <div>
-        <img alt='piano' class='picture' src="src/instrument-images/piano.jpg">
+        <img alt="piano" class="picture" src="src/instrument-images/piano.jpg">
     </div>   
 </section>
         
-    <script type=module src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>

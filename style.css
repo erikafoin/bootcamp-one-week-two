@@ -32,7 +32,7 @@ div article {
 }
 
 header {
-    width: 80%;
+    width: 75%;
     height: 180px;
     background-color: darkblue;
     align-items: center;
@@ -57,7 +57,7 @@ nav {
     display: flex;
     color: lightskyblue;
     height: 48px;
-    width: 80%;
+    width: 100%;
     background-color: darkblue;
     color: lightskyblue;
     align-items: center;
@@ -75,6 +75,7 @@ ul {
     list-style: none;
     background-color: darkblue;
     color: lightskyblue;
+    width: 120%;
     
 }
 
@@ -102,9 +103,19 @@ article {
 
 .hero {
     display: flex;
+    flex-direction: row;
+    padding-top: 48px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+#flex-column {
+    display: flex;
+    flex-direction: row;
 }
 p .hero {
-    font-size: 24pt;
+    font-size: 72px;
+    text-align: right;
 }
 
 img .hero {
@@ -112,8 +123,8 @@ img .hero {
     height: 25%;
 }
 
-.clearfix {
-    overflow: auto;
+/* .clearfix {
+    overflow: auto; */
 }
 a:link {
     color: whitesmoke
