@@ -3,6 +3,7 @@
     -mox-box-styling: border-box;
     box-sizing: border-box;
 }
+
 body {
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
@@ -32,8 +33,7 @@ div article {
 }
 
 header {
-    width: 75%;
-    height: 180px;
+    width: 100%;
     background-color: darkblue;
     align-items: center;
 }
@@ -42,7 +42,6 @@ body h1 {
     display: flex;
     font-family: 'Zhi Mang Xing', cursive;
     font-size: 48px;
-    text-align: center;
     height: 180px;
     width: 80%;
     background-color: darkblue;
@@ -55,28 +54,29 @@ body h1 {
 
 nav {
     display: flex;
+    position: absolute;
+    z-index: 3;
     color: lightskyblue;
     height: 48px;
-    width: 100%;
+    width: 97.5%;
     background-color: darkblue;
     color: lightskyblue;
     align-items: center;
     text-align: center;
-    margin: 0 auto;
     justify-content: center;
 }
 
 li {
     display: inline;
+    align-items: center;
     background-color: darkblue;
     color: lightskyblue;
 }
 ul {
     list-style: none;
+    align-items: center;
     background-color: darkblue;
-    color: lightskyblue;
-    width: 120%;
-    
+    color: lightskyblue;   
 }
 
 #container {
@@ -90,12 +90,11 @@ ul {
 }
 
 div {
-    width: 100%;
-    height: auto;
+    display: inline;
 }
 
 article {
-    background-color: whitesmoke;
+    background-color: lightgoldenrodyellow;
     font-family: 'Oswald', sans-serif;
     font-size: 18pt;
     height: auto
@@ -104,9 +103,8 @@ article {
 .hero {
     display: flex;
     flex-direction: row;
-    padding-top: 48px;
-    margin-left: 1px;
-    margin-right: 1px;
+    justify-content: space-between;
+    padding-top: 60px;
 }
 
 #flex-column {
@@ -119,13 +117,13 @@ p .hero {
 }
 
 img .hero {
-    width: auto;
-    height: 25%;
+    object-fit: fill;
 }
 
-/* .clearfix {
-    overflow: auto; */
+.clearfix {
+    overflow: auto;
 }
+
 a:link {
     color: whitesmoke
 }
@@ -136,4 +134,11 @@ a:visited {
 
 a:hover {
     color: hotpink;
+}
+
+#hero-text {
+font-size: 48px;
+align-items: center;
+text-align: center;
+margin: 80px;
 }
